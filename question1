@@ -40,9 +40,12 @@ with open('users.csv', 'r') as csv_file:
 				else:
 					continue
 
-print(one_week_ago_counter)
-print(one_month_ago_counter)
-print(three_month_ago_counter)			
+
+
+
+print("last week:",one_week_ago_counter)
+print("last month:",one_month_ago_counter)
+print("last three months:",three_month_ago_counter)			
 		
 		
 		
