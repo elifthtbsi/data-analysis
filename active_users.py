@@ -49,17 +49,14 @@ for i in active_users:
 	if i in not_premiums:
 		active_and_notpremiums+=1
 
-print("number of active users:",len(active_users))
-print("the ratio(active/premium):",len(active_users)/len(premiums))
-print("active and not premiums:", active_and_notpremiums)
+with open ('active_users.csv', 'w') as export_file:
+		headers=['title', 'value']
+		writer=csv.DictWriter(export_file, fieldnames=headers)
+		writer.writeheader()
 
+		dictionary=[{'title': 'number_of_active_users', 'value': len(active_users)},
+		{'title': 'the_ratio(active/premium)', 'value': len(active_users)/len(premiums)},
+		{'title' : 'active_and_notpremiums', 'value': active_and_notpremiums}]
 
-
-
-
-
-
-
-
-
+		writer.writerows(dictionary)
 

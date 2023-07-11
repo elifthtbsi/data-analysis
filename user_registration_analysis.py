@@ -40,12 +40,22 @@ with open('users.csv', 'r') as csv_file:
 				else:
 					continue
 
+with open ('users_register.csv', 'w') as export_file:
+	headers=['time_periods', 'users_number']
+
+	registers=[{'time_periods':'last_week', 'users_number':one_week_ago_counter}, 
+	{'time_periods':'last_month', 'users_number': one_month_ago_counter},
+	{'time_periods':'last_three_months', 'users_number':three_month_ago_counter}]
+
+	writer=csv.DictWriter(export_file, fieldnames=headers)
+	writer.writeheader()
+	writer.writerows(registers)
 
 
 
-print("last week:",one_week_ago_counter)
-print("last month:",one_month_ago_counter)
-print("last three months:",three_month_ago_counter)			
+
+
+
 		
 		
 		
