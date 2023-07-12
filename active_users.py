@@ -4,13 +4,14 @@ aktif olup premium olmayan kullanıcı sayısını verir
 """
 import csv
 from datetime import datetime,timedelta
-count=0
 today=datetime.today().date()
 one_week_ago=today-timedelta(days=7)
+
 active_users=[]
 premiums=[]
 not_premiums=[]
 active_and_notpremiums=0
+
 with open ('users.csv','r') as csv_file:
 	csv_reader=csv.reader(csv_file)
 	
