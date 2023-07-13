@@ -1,8 +1,7 @@
-users_progress.csv
-users.csv
-active_users.csv
-max_50_progress_log.csv
-users_register.csv
-articles.csv
-training.csv
-image.jpeg
+
+*.csv
+
+*.jpeg
+*.jpg
+
+.env
